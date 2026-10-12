@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { font-family: "Hind Siliguri", "Noto Sans Bengali", system-ui, sans-serif; }
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-track { display: flex; width: max-content; animation: ticker 45s linear infinite; }
+.ticker-wrap:hover .ticker-track { animation-play-state: paused; }
